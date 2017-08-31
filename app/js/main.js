@@ -1,4 +1,3 @@
-require("/Users/whalenj/Documents/Projects/newsapps/CUNNINGHAM/app/js/typeit.min.js");
 
 $(document).ready(function(){
   $('#example1').typeIt({
