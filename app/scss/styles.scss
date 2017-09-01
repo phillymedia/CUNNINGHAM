@@ -1,2 +1,111 @@
 @import 'longform-styles';
 @import 'philly-styles/values';
+
+
+
+.hangRight {
+    position: relative;
+    height: auto;
+    display: inline-block;
+    float: right;
+    margin-left: 20px;
+    // max-width: 60%;
+    @include tablet {
+        max-width: 55%;
+    };
+    @include mobile {
+        margin: 0px;
+        padding: 0px;
+        max-width: 100%;
+    };
+    @include BS-medium {
+        height: auto;
+        left: 100px;
+        margin-left: -100px;
+        width: 100%;
+        max-width: none;
+    };
+}
+
+
+
+    .imageFrame {
+        // @include transform(rotate(1deg));
+        background: white;
+        border: 5px solid #fff;
+        @include mobile {
+            border: 3px solid white;
+        };
+        @include BS-medium {
+            @include box-shadow(3px 4px 15px 0 rgba($darkblueshadow,0.3));
+        };
+    }
+
+    .tilt {
+        @include transform(rotate(-1deg));
+        border: 5px solid white;
+        @include box-shadow(3px 4px 15px 0 rgba($darkblueshadow,0.3));
+    }
+
+    .doubletilt {
+        border: 5px solid white;
+
+        @include BS-medium {
+            width: 85%;
+            @include box-shadow(3px 4px 15px 0 rgba($darkblueshadow,0.3));
+
+        };
+
+        &:first-child {
+            // @include transform(rotate(deg));
+        }
+
+        &:nth-child(2) {
+            margin-top: 10px;
+            margin-right: auto;
+            max-width: none;
+            @include BS-medium {
+                margin-top: -45px;
+                @include transform(rotate(1deg));
+                margin-left: auto;
+                margin-right: 0;
+                @include box-shadow(5px -5px 15px 0 rgba($darkblueshadow,0.3));
+
+            };
+        }
+
+
+
+
+
+    .doubletilt.vertical {
+        @include BS-medium {
+            max-width: 350px;
+        };
+    }
+
+    .moveup {
+        margin-top: -160px;
+    }
+
+
+    .containerPhotoCaption {
+        padding: 0;
+    }
+
+    .containerPhotoCredit {
+        padding: 0;
+    }
+}
+
+.mobilesmall {
+    @include mobile {
+        max-width: 50%;
+    };
+}
+
+.mobilehide {
+    @include mobile {
+        display: none;
+    };
+}

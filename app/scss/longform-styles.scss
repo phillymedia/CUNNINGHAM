@@ -1,5 +1,5 @@
 @import "philly-styles/values";
-
+$darkblueshadow: #2d3743;
 
 
 .headerIntro {
@@ -9,7 +9,7 @@
 }
 
 #backgroundImage-1 {
-    background-image: url("https://lh6.googleusercontent.com/tejM5o9mdc56AlYv_di_wI6VT_xjukI-jcn8pRT4J6rjbArVN-HugTKAqsmW_WtnyT4EMR8W0oZub00=w1243-h721-rw");
+    background-image: url("https://lh6.googleusercontent.com/fDxj7Z0gPCTjkyNnoepNyB0f_97iQg20Ulq9bT0x2c2em8RAipEjIm7o3ewOwo2b_JXzRandxHvhXW4=w1680-h953-rw");
     background-position: left 50% top 79px;
     @include tablet {
         background-position: left 50% top 49px;
