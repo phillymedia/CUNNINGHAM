@@ -1,9 +1,50 @@
 @import 'longform-styles';
 @import 'philly-styles/values';
 
+.dropBox {
+    position: relative;
+    font-size: 28px;
+    color: #222;
+    letter-spacing: .95px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    float: left;
+    margin-right: 10px;;
+    background-color: #111;
+    padding-top:3px;
+}
+
+.dropCap2 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 2.5em;
+    color: #222;
+    font-family: $philly-sans;
+    font-weight: 900;
+    color: $newsgrey;
+}
+
+
+.col-md-8.col {
+  background-color: #fff;
+}
 
 .sectionArt {
   position: relative;
+      margin-bottom: -20%;
+}
+
+.sectionHeadText {
+  padding: 30px 0 10px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 36px;
+  font-family: $philly-serif;
+  letter-spacing: 3px;
+  border-bottom: 2px dotted $darkred;
 }
 
 .sectionArt .sectionOverlayText {
@@ -12,6 +53,7 @@
 
 .sectionOverlayText {
     position: absolute;
+    padding: 4px 0 0;
     top: auto;
     bottom: 20%;
     width: 50%;
@@ -19,13 +61,12 @@
     right: 0;
     margin: auto;
     text-align: center;
-    color: #fff;
+    color: $newsgrey;
     background-color: #000;
-    font-family: $philly-serif;
-    font-weight: 300;
-    letter-spacing: -5px;
+    font-family: $philly-sans;
+    letter-spacing: -2px;
     line-height: normal;
-    font-size: 60px;
+    font-size: 50px;
     @include tablet {
         font-size: 68px;
         padding: 0 10px;
@@ -52,7 +93,7 @@
 //   bottom: 0;
 // z-index: 2;
 // width: 100%;
-// height: 400px;
+// height: 200px;
 // /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,ffffff+28,ffffff+100&1+21,0+100 */
 // background: -moz-linear-gradient(bottom, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 21%, rgba(255,255,255,0.91) 28%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
 // background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 1%,rgba(255,255,255,1) 21%,rgba(255,255,255,0.91) 28%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
