@@ -1,6 +1,31 @@
 @import 'longform-styles';
 @import 'philly-styles/values';
 
+#imageStack-1 {
+  transform: rotate(-4deg);
+  z-index: 2;
+  position: relative;
+}
+
+#imageStack-2 {
+      margin: -120px 40px 0;
+      transform: rotate(2deg);
+      z-index: 1;
+      position: relative;
+}
+
+.section-border {
+    position: absolute;
+    margin: 0 auto;
+    left: -5%;
+    right: 0;
+    width: 110%;
+    height: 310px;
+    background: #fff;
+    border-bottom: none;
+    z-index: -1;
+}
+
 .dropBox {
     position: relative;
     font-size: 28px;
@@ -29,12 +54,13 @@
 
 
 .col-md-8.col {
-  background-color: #fff;
+position: relative;
+z-index: 3;
 }
 
 .sectionArt {
   position: relative;
-      margin-bottom: -20%;
+      margin-bottom: -300px;
 }
 
 .sectionHeadText {
@@ -45,6 +71,8 @@
   font-family: $philly-serif;
   letter-spacing: 3px;
   border-bottom: 2px dotted $darkred;
+  position: relative;
+  z-index: 2;
 }
 
 .sectionArt .sectionOverlayText {
@@ -135,14 +163,14 @@
             border: 3px solid white;
         };
         @include BS-medium {
-            @include box-shadow(3px 4px 15px 0 rgba($darkblueshadow,0.3));
+            @include box-shadow(3px 4px 15px 0 rgba(#000,0.3));
         };
     }
 
     .tilt {
         @include transform(rotate(-1deg));
         border: 5px solid white;
-        @include box-shadow(3px 4px 15px 0 rgba($darkblueshadow,0.3));
+        @include box-shadow(3px 4px 15px 0 rgba(#000,0.3));
     }
 
     .doubletilt {
@@ -150,7 +178,7 @@
 
         @include BS-medium {
             width: 85%;
-            @include box-shadow(3px 4px 15px 0 rgba($darkblueshadow,0.3));
+            @include box-shadow(3px 4px 15px 0 rgba(#000,0.3));
 
         };
 
