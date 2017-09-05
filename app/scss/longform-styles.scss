@@ -153,8 +153,8 @@ $darkred: #800000;
 }
 
 .containerQuote {
-    border-top: 1px solid #aaa;
-    border-bottom: 1px solid #aaa;
+    border-top: 2px dotted #800000;
+    border-bottom: 2px dotted #800000;
     margin-left: -11%;
     @media (max-width: 992px) {
         margin-left: 0;
