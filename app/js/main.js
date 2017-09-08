@@ -1,9 +1,44 @@
 
 $(document).ready(function(){
-  $('#example1').typeIt({
-     strings: 'This is a simple string.',
-     speed: 50,
-     autoStart: false,
-     cursor:false
-});
+
+  $(window).on('ready resize', function() {
+      var rowwidth = $(".col").outerWidth();
+      var outercolwidth = $(".container").outerWidth();
+      var windowwidth = $(window).width();
+      var colleftbuffer = $('.col-md-6').offset().left + $(".col-md-6").outerWidth();
+      var colleft = $(".col-md-6").outerWidth();
+
+      if ($(window).width() >= 992) {
+          $(".fixedside")
+              .css('left', colleft + "px")
+              .css('width', $(window).width() - colleftbuffer - 20 + "px")
+              .css('margin-right', '');
+
+
+      } else if ($(window).width() < 992 && $(window).width() >= 768) {
+          $(".fixedside")
+              .css('left', "")
+              .css('width', colleft * .50 + $('.col-md-6').offset().left + "px")
+              .css('margin-right', '-' + ($('.col-md-6').offset().left - 10) + "px");
+
+      } else if ($(window).width() < 768) {
+          $(".fixedside")
+              .css('left', "")
+              .css('width', "")
+              .css('margin-right', '');
+      }
+      var videosource = "'http://media.philly.com/storage/inquirer/video/AvalancheVideo2.mp4'";
+
+      if ($(window).width() < 600) {
+          $("video source").attr("src") == "";
+          console.log($("video source").attr("src"));
+      } else {
+          $("video source").attr("src") == videosource;
+          console.log($("video source").attr("src"));
+      }
+
+
+  })
+
+
 });

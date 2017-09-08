@@ -1,6 +1,10 @@
 @import 'longform-styles';
 @import 'philly-styles/values';
 
+
+
+
+
 #imageStack-1 {
   transform: rotate(-4deg);
   z-index: 2;
@@ -26,6 +30,9 @@
     z-index: -1;
 }
 
+
+
+
 .dropBox {
     position: relative;
     font-size: 28px;
@@ -38,6 +45,7 @@
     margin-right: 10px;;
     background-color: #111;
     padding-top:3px;
+margin-top: 20px;
 }
 
 .dropCap2 {
@@ -52,6 +60,81 @@
     color: $newsgrey;
 }
 
+
+
+
+.firstp {
+    font-size: 1.75em;
+    line-height: 1.25em;
+    margin: 60px 0 50px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.fixedside {
+    position: relative;
+    height: auto;
+    display: inline-block;
+    float: right;
+    margin-left: 20px;
+    // max-width: 60%;
+    @include tablet {
+        max-width: 55%;
+    };
+    @include mobile {
+        margin: 0px;
+        padding: 0px;
+        max-width: 100%;
+    };
+    @include BS-medium {
+        position: absolute;
+        height: auto;
+        left: 100px;
+        width: 100%;
+        display: flex;
+        max-width: none;
+    };
+}
+
+
+.inner-container {
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 0 0 0 15px;
+    @include mobile {
+        margin:0;
+        padding: 15px 0;
+    };
+    @include BS-medium {
+        padding: 0 20px;
+        margin: 0 auto;
+    };
+    @include BS-large {
+        // padding: 0 65px;
+        max-width: 650px;
+        padding-right: 60px;
+    };
+}
+
+
+.containerPhotoCredit {
+    padding: 0 12px;
+    color: #888;
+font-size: 11px;
+font-style: italic;
+margin-top: 5px;
+position: relative;
+text-align: right;
+}
+
+.containerPhotoCaption {
+    margin-top: 0.5em;
+    padding: 0 12px;
+    color: #888;
+    font-size: 12px;
+}
 
 .col-md-8.col {
 position: relative;
@@ -156,6 +239,38 @@ z-index: 3;
     };
 }
 
+.hangLeft {
+    position: relative;
+    height: auto;
+    display: inline-block;
+    float: left;
+
+    // max-width: 60%;
+
+    @include mobile {
+        margin: 0px;
+        padding: 0px;
+        margin-left: 0px;
+        width: 100% !important;
+    };
+    @include BS-medium {
+        height: auto;
+        width: 100%;
+        max-width: none;
+        margin-left: -100px;
+    };
+}
+
+
+
+.hoverGrow:hover {
+  transition: all .2s ease-in-out;
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari */
+  transform: scale(1.05);
+  cursor:pointer;
+}
+
 
 
     .imageFrame {
@@ -237,4 +352,28 @@ z-index: 3;
     @include mobile {
         display: none;
     };
+}
+
+
+
+.containerQuote {
+    border-top: 2px dotted #800000;
+    border-bottom: 2px dotted #800000;
+    width: 100%;
+    max-width: 100%;
+    margin: 25px auto 30px;
+}
+
+.containerQuoteText {
+    font-family: $philly-serif;
+    font-weight: 400;
+    line-height: 1.25em;
+    font-size: 38px;
+    text-align: left !important;
+}
+
+.containerQuoteSource {
+    color: #888;
+    font-family: $philly-sans;
+    font-size: 16px;
 }
