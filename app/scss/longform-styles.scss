@@ -2,6 +2,7 @@
 $darkblueshadow: #2d3743;
 $newsgrey: #DCDCDD;
 $darkred: #800000;
+$yellow: rgb(195, 199, 126);
 
 
 .headerIntro {
@@ -11,7 +12,7 @@ $darkred: #800000;
 }
 
 #backgroundImage-1 {
-    background-image: url("http://media.philly.com/images/grid.jpg");
+    background-image: url("http://media.philly.com/images/cecilia_art_grid-lines_cropped_10.173.png");
     background-position: left 50% top 79px;
     @include tablet {
         background-position: left 50% top 49px;
