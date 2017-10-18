@@ -1,4 +1,4 @@
-
+require("./video");
 $(document).ready(function(){
 
   $(window).on('ready resize', function() {

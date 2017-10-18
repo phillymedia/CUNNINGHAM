@@ -3,10 +3,46 @@
 
 
 body {
-  background-color: #eee !important;
+  background-color: #f0f0f0 !important;
 }
 
 
+.yt-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.yt-video {
+  width: 100%;
+}
+
+.yt-outer .containerPhotoCaption {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+
+#replay {
+    height: 15px;
+    background-color: $yellow;
+    opacity: 0.8;
+    border-radius: 5px;
+    padding: 4px 5px 3px;
+    color: #333;
+    line-height: 2.5;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#replay:hover {
+  opacity: 1;
+}
+
+#replay span {
+    margin-right: -9px
+}
 
 
 
