@@ -27,15 +27,7 @@ $(document).ready(function(){
               .css('width', "")
               .css('margin-right', '');
       }
-      var videosource = "'http://media.philly.com/storage/inquirer/video/AvalancheVideo2.mp4'";
 
-      if ($(window).width() < 600) {
-          $("video source").attr("src") == "";
-          console.log($("video source").attr("src"));
-      } else {
-          $("video source").attr("src") == videosource;
-          console.log($("video source").attr("src"));
-      }
 
 
   })

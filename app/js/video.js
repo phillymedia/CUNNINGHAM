@@ -58,39 +58,57 @@ $(document).ready(function() {
     // Kick off one resize to fix all videos on page load
   }).resize();
 
-  $( ".vid_img_gal .play" ).hover(
+  $(".vid_img_gal .control").hover(
     function() {
       $(this).animate({
         width: "140px"
       }, 50, function() {
-        $(this).find(".play-label").css("opacity", "1");
+        $(this).find(".control-label").css("opacity", "1");
       })
-    }, function() {
+    },
+    function() {
       $(this).animate({
         width: "57px"
       }, 50, function() {
-        $(this).find(".play-label").css("opacity", "0");
+        $(this).find(".control-label").css("opacity", "0");
       })
     }
   );
 
-  $(".vid_img_gal .play").click(function(){
-    $(this).siblings('.videoWrapper').fadeIn();
-    $(this).siblings('.videoWrapper').find('.yt-video')[0].src += "&autoplay=1";
+  $(".vid_img_gal .control").click(function() {
+    if ($(this).find(".glyphicon").hasClass("glyphicon-play")) {
+      var imgh = $(this).siblings('.carousel').find(".carousel-inner .active img").height();
+      var imgw = $(this).siblings('.carousel').find(".carousel-inner .active img").width();
+      console.log(imgh);
+      $(this).siblings('.videoWrapper').find('.yt-video').css({
+        "height": imgh,
+        "width": imgw
+      });
+      $(this).siblings('.videoWrapper').fadeIn();
+      $(this).siblings('.videoWrapper').find('.yt-video')[0].src += "&autoplay=1";
+      $(this).find(".glyphicon").removeClass('glyphicon-play').addClass('glyphicon-pause');
+      $(this).find(".control-label").html("Stop video");
+      $(".carousel").animate({opacity: 0}, 1000);
+    }
+    else if ($(this).find(".glyphicon").hasClass("glyphicon-pause")) {
+      $(this).siblings('.videoWrapper').fadeOut();
+      $('.yt-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+      $(this).parent().siblings('.videoWrapper').fadeOut();
+      $(this).find(".glyphicon").removeClass('glyphicon-pause').addClass('glyphicon-play');
+      $(this).find(".control-label").html("Play video");
+      $(".carousel").animate({opacity: 1}, 1000);
+    }
   });
 
-  // $(".vid_img_gal .play").hover(function() {
-  //   $(this).animate({
-  //     width: "140px"
-  //   }, 50, function() {
-  //     $(this).find(".play-label").css("opacity", "1");
-  //   }, function() {
-  //     $(this).animate({
-  //       width: "57px"
-  //     }, 50, function() {
-  //       $(this).find(".play-label").css("opacity", "0");
-  //     });
+
+  // var checkExist = setInterval(function() {
+  //   $(".carousel-control").click(function(){
+  //     $('.yt-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+  //     $(this).parent().siblings('.videoWrapper').fadeOut();
+  //     $(".vid_img_gal .play").fadeIn();
   //   });
-  // });
+  // }, 100); // check every 100ms
+
+
 
 });

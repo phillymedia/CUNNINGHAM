@@ -1,21 +1,29 @@
 @import 'longform-styles';
 @import 'philly-styles/values';
+@import 'carousel';
 
-.bodyContainer a {
+
+
+
+.bodyContainer a:not(.carousel-inner a) {
   cursor: pointer;
   color: $darkyellow !important;
   box-shadow: inset -2px -5px 0 -2px rgba(187, 191, 115, 0.4) !important;
   transition: box-shadow 0.3s cubic-bezier(.86,0,.07,1) !important;
 }
 
-.bodyContainer a:hover {
+.bodyContainer a:hover :not(.carousel-inner a) {
   box-shadow: inset -2px -22px 0 -3px rgba(187, 191, 115, 0.4) !important;
   text-decoration: none;
   color: $darkyellow !important;
 }
 
+.ccap {
+  background-color: $background !important;
+}
+
 body {
-  background-color: #f0f0f0 !important;
+  background-color: $background !important;
 }
 
 .yt-video {
@@ -37,52 +45,13 @@ body {
   font-size: 36px;
 }
 
-.vid_img_gal .play {
-  color: white;
-  position: absolute;
-  text-transform: uppercase;
-  opacity: 0.7;
-  left: 30px;
-  bottom: 30px;
-  width: 57px;
-  height: 52px;
-  border: 1px solid #fff;
-  background: #000;
-  overflow: hidden;
-  border-radius: 4px;
-  -webkit-transition: width 0.3s ease, opacity 0.3s linear;
-  -moz-transition: width 0.3s ease, opacity 0.3s linear;
-  -o-transition: width 0.3s ease, opacity 0.3s linear;
-  -ms-transition: width 0.3s ease, opacity 0.3s linear;
-  transition: width 0.3s ease, opacity 0.3s linear;
-}
 
-.vid_img_gal .play .glyphicon-play {
-  font-size: 30px;
-  text-align: center;
-  line-height: 1.5;
-  margin-left: 13px;
-}
-
-.vid_img_gal .play .play-label {
-  font-size: 13px;
-    left: 50px;
-    width: 100px;
-    position: absolute;
-    height: 100%;
-    line-height: 52px;
-    opacity: 0;
-    -webkit-transition: width 0.3s ease, opacity 0.3s linear;
-    -moz-transition: width 0.3s ease, opacity 0.3s linear;
-    -o-transition: width 0.3s ease, opacity 0.3s linear;
-    -ms-transition: width 0.3s ease, opacity 0.3s linear;
-    transition: width 0.3s ease, opacity 0.3s linear;
-}
 .vid_img_gal .videoWrapper {
   display: none;
+  z-index: 1;
 }
 
-.vid_img_gal .play:hover {
+.vid_img_gal .control:hover {
   opacity: 1;
 }
 
