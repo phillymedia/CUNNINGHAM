@@ -32,6 +32,11 @@
   font-size: 12px !important;
 }
 
+.subhead_wrapper {
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
 .subhead {
   background-color: #333;
       padding: 5px 10px;
@@ -42,7 +47,7 @@
       font-size: 24px;
       font-weight: 200;
       margin-bottom: 30px !important;
-      line-height: 6;
+
 
   @include mobile {
     font-size: 24px;
@@ -334,16 +339,16 @@ body {
 }
 
 #imageStack-8 {
-  margin: -10px -10px 0;
-  transform: rotate(-4deg);
-  z-index: 3;
+  margin: -10px -50px 0;
+  transform: rotate(-1deg);
+  z-index: 2;
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 #imageStack-9 {
-  margin: -70px 0px 30px;
+  margin: -20px 0px 30px;
   transform: rotate(6deg);
   z-index: 3;
   position: relative;
