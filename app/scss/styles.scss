@@ -371,7 +371,7 @@ body {
 
 .carousel {
   @include tablet {
-    width: 95%;
+    width: 85%;
   }
 }
 
@@ -380,6 +380,7 @@ body {
     transform: none;
     margin: 0;
     max-width: 100%;
+    margin-bottom: 5px;
   }
 }
 
@@ -459,6 +460,7 @@ body {
     margin: 0;
     padding: 0;
     max-width: 100%;
+    width: 100%;
   };
   @include BS-medium {
     position: absolute;
