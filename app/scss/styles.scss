@@ -369,6 +369,11 @@ body {
   max-width: 200px;
 }
 
+.carousel {
+  @include tablet {
+    width: 95%;
+  }
+}
 
 #imageStack-1, #imageStack-2, #imageStack-3, #imageStack-4, #imageStack-5, #imageStack-6, #imageStack-7, #imageStack-8, #imageStack-9 {
   @include mobile {
@@ -379,7 +384,7 @@ body {
 }
 
 .short-t {
-  @include mobile {
+  @include tablet {
     height: 450px !important;
   }
 }
