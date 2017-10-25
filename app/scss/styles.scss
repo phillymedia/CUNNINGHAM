@@ -753,11 +753,16 @@ body {
 }
 
 .containerQuote {
-  border-top: 2px dotted #800000;
-  border-bottom: 2px dotted #800000;
-  width: 100%;
-  max-width: 100%;
-  margin: 25px auto 30px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    width: 95%;
+    max-width: 100%;
+    margin: 25px auto 30px;
+    background: transparent;
+}
+
+.containerMedia {
+    padding: 30px 0;
 }
 
 .containerQuoteText {
