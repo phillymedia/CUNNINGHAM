@@ -58,57 +58,57 @@ $(document).ready(function() {
     // Kick off one resize to fix all videos on page load
   }).resize();
 
-  $(".vid_img_gal .control").hover(
-    function() {
-      $(this).animate({
-        width: "140px"
-      }, 50, function() {
-        $(this).find(".control-label").css("opacity", "1");
-      })
-    },
-    function() {
-      $(this).animate({
-        width: "57px"
-      }, 50, function() {
-        $(this).find(".control-label").css("opacity", "0");
-      })
-    }
-  );
-
-  $(".vid_img_gal .control").click(function() {
-    if ($(this).find(".glyphicon").hasClass("glyphicon-play")) {
-      var imgh = $(this).siblings('.carousel').find(".carousel-inner .active img").height();
-      var imgw = $(this).siblings('.carousel').find(".carousel-inner .active img").width();
-      console.log(imgh);
-      $(this).siblings('.videoWrapper').find('.yt-video').css({
-        "height": imgh,
-        "width": imgw
-      });
-      $(this).siblings('.videoWrapper').fadeIn();
-      $(this).siblings('.videoWrapper').find('.yt-video')[0].src += "&autoplay=1";
-      $(this).find(".glyphicon").removeClass('glyphicon-play').addClass('glyphicon-pause');
-      $(this).find(".control-label").html("Stop video");
-      $(".carousel").animate({opacity: 0}, 1000);
-    }
-    else if ($(this).find(".glyphicon").hasClass("glyphicon-pause")) {
-      $(this).siblings('.videoWrapper').fadeOut();
-      $('.yt-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-      $(this).parent().siblings('.videoWrapper').fadeOut();
-      $(this).find(".glyphicon").removeClass('glyphicon-pause').addClass('glyphicon-play');
-      $(this).find(".control-label").html("Play video");
-      $(".carousel").animate({opacity: 1}, 1000);
-    }
-  });
+  // $(".vid_img_gal .control").hover(
+  //   function() {
+  //     $(this).animate({
+  //       width: "140px"
+  //     }, 50, function() {
+  //       $(this).find(".control-label").css("opacity", "1");
+  //     })
+  //   },
+  //   function() {
+  //     $(this).animate({
+  //       width: "57px"
+  //     }, 50, function() {
+  //       $(this).find(".control-label").css("opacity", "0");
+  //     })
+  //   }
+  // );
 
 
-  // var checkExist = setInterval(function() {
-  //   $(".carousel-control").click(function(){
-  //     $('.yt-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-  //     $(this).parent().siblings('.videoWrapper').fadeOut();
-  //     $(".vid_img_gal .play").fadeIn();
+
+
+
+
+  // setTimeout(function() {
+  //   var galleryids = [".451624583", ".451624583", ".451624583"];
+  //   var youtube_id = ["TjtSiRJmfnM"]
+  //   $(".v-carousel").each(function(index) {
+  //     var galleryid = galleryids[index];
+  //     var youtube_iframe = '<iframe class="yt-video" width="560" height="315" src="https://www.youtube.com/embed/' + youtube_id[index] + '?rel=0&amp;controls=0&amp;showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe></div>';
+  //     var itemCount = $(galleryid).find('.item').length;
+  //     var youtube_indicator = '<li class="video_play" data-target="#carousel-one-generic" data-slide-to="0"><span class="glyphicon glyphicon-play">&nbsp;</span></li>'
+  //     var video_slide = ("<div class='item item-video' alignment='true'>" + youtube_iframe + "</div>");
+  //     $(galleryid).find(".carousel-inner").prepend(video_slide);
+  //     $(galleryid).find(".carousel-thumbnail-container .carousel-indicators").prepend(youtube_indicator);
+  //     var imgh = $(galleryid).find(".carousel-inner img").height();
+  //     var imgw = $(galleryid).find(".carousel-inner img").width();
+  //     $(galleryid).find('.yt-video').css({
+  //       "height": imgh,
+  //       "width": imgw
+  //     });
+  //     $(galleryid).find(".item").removeClass("active")
+  //     $(".item-video").addClass("active");
+  //     $(".item").each(function(index) {
+  //       $(this).attr('data-slide-to', index);
+  //     });
+  //     $(".carousel-indicators li").each(function(index) {
+  //       $(this).attr('data-slide-to', index);
+  //     });
   //   });
-  // }, 100); // check every 100ms
-
+  //
+  //   $()
+  // }, 3000);
 
 
 });

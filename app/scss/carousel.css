@@ -1,82 +1,69 @@
+.carousel-thumbnail-container {
+  position: relative;
+  z-index: 1000 !important;
+}
+
+.video_play {
+  color: white;
+  background-color: rgb(187, 191, 115) !important;
+  overflow: hidden;
+}
+
+.video_play:hover {
+  background-color: #333 !important;
+  color: rgb(187, 191, 115);
+}
+
+.video_play .glyphicon {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
 .carousel-caption {
-    padding-top: 5px!important;
-    color: #777!important;
-    font-size: 14px!important;
-    font-weight: 200!important;
-    text-align: right!important;
-    text-shadow: none !important;
-    position: relative !important;
-    left: 0 !important;
-    right: 0 !important;
-    padding-bottom: 0 !important;
-    bottom: 0 !important;
-    font-size: 12px !important;
+  padding-top: 5px!important;
+  color: #777!important;
+  font-size: 14px!important;
+  font-weight: 200!important;
+  text-align: right!important;
+  text-shadow: none !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding-bottom: 0 !important;
+  bottom: 0 !important;
+  font-size: 12px !important;
 }
 
 #carousel-one-generic .carousel-indicators {
-    margin: 10px 0 0;
-    overflow: auto;
-    position: static;
-    text-align: right;
-    white-space: nowrap;
-    width: 100%;
-    display: block !important;
+  margin: 10px 0 0;
+  overflow: auto;
+  position: static;
+  text-align: right !important;
+  white-space: nowrap;
+  width: 100%;
+  display: block !important;
 }
 
 #carousel-one-generic .carousel-indicators li {
-    background-color: transparent;
-    border-radius: 0;
-    display: inline-block;
-    height: auto;
-    margin: 0 5px;
-    width: 75px;
-        border: none !important;
+  background-color: transparent;
+  border-radius: 0;
+  display: inline-block;
+  height: 42.25px;
+  margin: 0 5px;
+  width: 75px;
+  border: none !important;
+  padding-bottom: 20px;
 }
+
 #carousel-one-generic .carousel-indicators li img {
-    display: block;
-    opacity: 0.5;
+  display: block;
+  opacity: 0.5;
 }
+
 #carousel-one-generic .carousel-indicators li.active img {
-    opacity: 1;
+  opacity: 1;
 }
+
 #carousel-one-generic .carousel-indicators li:hover img {
-    opacity: 0.75;
-}
-
-
-
-/**/
-
-.control {
-    color: #fff !important;
-    text-transform: uppercase;
-    opacity: .7  !important;
-    border: 1px solid #fff  !important;
-    background: #000  !important;
-    overflow: hidden  !important;
-    border-radius: 4px  !important;
-    transition: width .3s ease,opacity .3s linear;
-    z-index: 5;
-}
-
-.control .glyphicon {
-  font-size: 30px;
-  text-align: center;
-  line-height: 1.5;
-  margin-left: 13px;
-}
-
-.control .control-label {
-  font-size: 13px;
-    left: 50px;
-    width: 100px;
-    position: absolute;
-    height: 100%;
-    line-height: 52px;
-    opacity: 0;
-    -webkit-transition: width 0.3s ease, opacity 0.3s linear;
-    -moz-transition: width 0.3s ease, opacity 0.3s linear;
-    -o-transition: width 0.3s ease, opacity 0.3s linear;
-    -ms-transition: width 0.3s ease, opacity 0.3s linear;
-    transition: width 0.3s ease, opacity 0.3s linear;
+  opacity: 0.75;
 }

@@ -2,7 +2,7 @@
 $darkblueshadow: #2d3743;
 $newsgrey: #DCDCDD;
 $darkred: #800000;
-$yellow: rgb(195, 199, 126);
+$yellow: ghostwhite;
 $darkyellow: rgb(79, 79, 79);
 $background: #f0f0f0;
 
@@ -47,39 +47,10 @@ $background: #f0f0f0;
         padding-bottom: percentage(800/1200)-5;
     }
 }
+.progress {
+    height: .125rem !important;
+  }
 
-.overlayText {
-    position: absolute;
-    top: auto;
-    bottom: 20%;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    color: #fff;
-    font-family: $philly-sans;
-    font-weight: 600;
-    letter-spacing: -5px;
-    line-height: normal;
-    text-shadow: 0 0 15px #000;
-    font-size: 80px;
-    @include tablet {
-        font-size: 68px;
-        padding: 0 10px;
-    }
-    @include mobile {
-        position: relative;
-        top: inherit;
-        bottom: inherit;
-        color: #000;
-        text-shadow: none !important;
-        padding: 30px 10px 10px;
-        margin-bottom: 0.625rem;
-        font-weight: 800;
-        letter-spacing: -.0625rem;
-        font-size: 2.5rem;
-        line-height: 1.05;
-    }
-}
 
 .backgroundImageCredit {
     position: absolute;
@@ -185,13 +156,7 @@ $background: #f0f0f0;
     }
 }
 
-.byline {
-    line-height: 2.25em;
-    top: 15px;
-    font-family: $philly-sans;
-    color: #777;
-    font-size: 16px;
-}
+
 
 .dateline {
     font-family: $philly-sans;

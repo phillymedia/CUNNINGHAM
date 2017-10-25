@@ -32,5 +32,18 @@ $(document).ready(function(){
 
   })
 
+  $("#timeline-show").click(function(){
+    if($(".timeline-container").hasClass('short-t')) {
+      $(".timeline-container").removeClass('short-t');
+      $("#timeline-show").html('Close full timeline <span class="glyphicon glyphicon-triangle-top">&nbsp;</span>');
+    } else {
+      $(".timeline-container").addClass('short-t');
+      $("#timeline-show").html('Open full timeline <span class="glyphicon glyphicon-triangle-bottom">&nbsp;</span>');
+    }
+  });
+
+
+
+
 
 });
