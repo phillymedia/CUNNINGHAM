@@ -34,14 +34,15 @@
 
 .subhead {
   background-color: #333;
-padding: 2px 5px;
-font-family: $philly-sans;
-
-text-shadow: none;
-color: $yellow;
-display: inline;
-font-size: 28px;
-font-weight: 600;
+      padding: 5px 10px;
+      font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", "Gotham Narrow", "Arial", sans-serif;
+      text-shadow: none;
+      color: ghostwhite;
+      display: inline;
+      font-size: 24px;
+      font-weight: 200;
+      margin-bottom: 30px !important;
+      line-height: 2;
   @include mobile {
     font-size: 24px;
   }
@@ -331,14 +332,39 @@ body {
   width: 100%;
 }
 
+#imageStack-8 {
+  margin: -10px -10px 0;
+  transform: rotate(-4deg);
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
 
-#imageStack-1, #imageStack-2, #imageStack-3, #imageStack-4, #imageStack-5, #imageStack-6, #imageStack-7 {
+#imageStack-9 {
+  margin: -70px 0px 30px;
+  transform: rotate(6deg);
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+}
+
+
+#imageStack-1, #imageStack-2, #imageStack-3, #imageStack-4, #imageStack-5, #imageStack-6, #imageStack-7, #imageStack-8, #imageStack-9 {
   @include mobile {
     transform: none;
     margin: 0;
     max-width: 100%;
   }
 }
+
+.short-t {
+  @include mobile {
+    height: 450px !important;
+  }
+}
+
 
 .section-border {
   position: absolute;
