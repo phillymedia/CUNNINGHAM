@@ -208,9 +208,9 @@ body {
 
 .suboverlay {
   font-size: 30px;
-  height: 200px;
+  height: 150px;
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.85);
   color: white;
   @include tablet {
       background-color: transparent !important;
@@ -229,10 +229,9 @@ body {
   line-height: 1.3em;
   letter-spacing: 0.138em;
   font-size: 24px;
-  background-color: black;
   color: white;
   vertical-align: middle;
-  padding-top: 50px;
+  padding-top: 25px;
   @include tablet {
       background-color: transparent !important;
       color: black;
